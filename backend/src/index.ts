@@ -14,7 +14,7 @@ import { startScheduler } from './scheduler';
 const app = express();
 const httpServer = createServer(app);
 
-app.use(cors({ origin: process.env.FRONTEND_URL || 'http://localhost:3000' }));
+app.use(cors({ origin: process.env.FRONTEND_URL || 'http://localhost:3000'||  'http://localhost:3001' }));
 app.use(express.json());
 
 app.get('/health', (req, res) => {
